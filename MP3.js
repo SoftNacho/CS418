@@ -261,9 +261,22 @@ function loadShaderFromDOM(id)
  */
 function setupShaders() 
 {
-  vertexShader = loadShaderFromDOM("shader-vs");
-  fragmentShader = loadShaderFromDOM("shader-fs");
+    /*
+    if (document.getElementById("shaded").checked)
+    {
+        vertexShader = loadShaderFromDOM("shaded-shader-vs");
+        fragmentShader = loadShaderFromDOM("shaded-shader-fs");
+    }//if user selects reflecting
   
+    else 
+    {    
+        vertexShader = loadShaderFromDOM("shader-vs");
+        fragmentShader = loadShaderFromDOM("shader-fs");
+    }//end if user slects reflecting
+    */
+    
+    vertexShader = loadShaderFromDOM("shader-vs");
+    fragmentShader = loadShaderFromDOM("shader-fs");
   shaderProgram = gl.createProgram();
   gl.attachShader(shaderProgram, vertexShader);
   gl.attachShader(shaderProgram, fragmentShader);
